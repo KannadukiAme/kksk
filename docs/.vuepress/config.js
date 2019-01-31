@@ -1,6 +1,7 @@
 module.exports = {
   title: 'kksk',
   description: 'some notes for web dev...',
+  base:'/kksk/',
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
