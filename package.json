@@ -1,0 +1,17 @@
+{
+  "name": "memo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://gitee.com/nanasakimomiji/memo.git",
+  "author": "WKY <qingjiedou@qq.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "markdown-it-task-lists": "^2.1.1",
+    "vuepress": "^1.0.0-alpha.35"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
