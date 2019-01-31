@@ -118,3 +118,13 @@ commitizen init cz-conventional-changelog --yarn --dev --exact
 ```
 
 以后可用git cz代替git commit
+
+## 部署gh-pages
+
+build docs
+
+部署
+
+```
+git push -f git地址 master:gh-pages
+```
