@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git | kksk</title>
+    <meta name="description" content="some notes for web dev...">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.b8fab15c.css" as="style"><link rel="preload" href="/assets/js/app.f1478fcb.js" as="script"><link rel="preload" href="/assets/js/2.793c0697.js" as="script"><link rel="preload" href="/assets/js/7.a1c899b2.js" as="script"><link rel="prefetch" href="/assets/js/3.a5d82b8d.js"><link rel="prefetch" href="/assets/js/4.8c3ebc4a.js"><link rel="prefetch" href="/assets/js/5.b5a75910.js"><link rel="prefetch" href="/assets/js/6.dab9dd10.js"><link rel="prefetch" href="/assets/js/8.ea075453.js"><link rel="prefetch" href="/assets/js/9.97ac0724.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b8fab15c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">kksk</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/notes/" class="nav-link router-link-active">笔记</a></div><div class="nav-item"><a href="https://github.com/KannadukiAme/kksk.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Git
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/notes/" class="nav-link router-link-active">笔记</a></div><div class="nav-item"><a href="https://github.com/KannadukiAme/kksk.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Git
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/notes/" class="sidebar-link">介绍</a></li><li><a href="/notes/git.html" class="active sidebar-link">git</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/notes/git.html#常用操作命令" class="sidebar-link">常用操作命令</a></li><li class="sidebar-sub-header"><a href="/notes/git.html#分支管理" class="sidebar-link">分支管理</a></li><li class="sidebar-sub-header"><a href="/notes/git.html#提交信息规范" class="sidebar-link">提交信息规范</a></li></ul></li><li><a href="/notes/vim.html" class="sidebar-link">vim</a></li></ul> </aside> <main class="page"> <div class="content default"><h1 id="git"><a href="#git" aria-hidden="true" class="header-anchor">#</a> git</h1> <blockquote><p>记录关于git的常用操作与分支管理、提交信息规范</p></blockquote> <h2 id="常用操作命令"><a href="#常用操作命令" aria-hidden="true" class="header-anchor">#</a> 常用操作命令</h2> <div class="language- extra-class"><pre class="language-text"><code>git init
+</code></pre></div><p>初始化git项目（生成.git文件夹）</p> <div class="language- extra-class"><pre class="language-text"><code>git clone https://xxxxxx
+</code></pre></div><p>克隆远程git项目（一般支持https和ssh两种协议）</p> <div class="language- extra-class"><pre class="language-text"><code>git pull origin(本地分支) master(远程分支)
+</code></pre></div><p>拉取指定远程分支到本地分支（若本地分支和远程名称一致，可省略）</p> <div class="language- extra-class"><pre class="language-text"><code>git push origin(本地分支) master(远程分支)
+</code></pre></div><p>推送指定远程分支到本地分支（若本地分支和远程名称一致，可省略）</p> <div class="language- extra-class"><pre class="language-text"><code>git push origin(本地分支) master(远程分支) --force
+</code></pre></div><p>强制推送（一般用于撤销某些不需要的commit，需谨慎使用）</p> <div class="language- extra-class"><pre class="language-text"><code>git add -A
+</code></pre></div><p>添加所有文件到工作区</p> <div class="language- extra-class"><pre class="language-text"><code>git commit -m &quot;提交说明&quot;
+</code></pre></div><p>将工作区的改动提交</p> <div class="language- extra-class"><pre class="language-text"><code>git reset --hard
+</code></pre></div><p>丢弃当前所有改动，重置到当前最新提交的版本</p> <div class="language- extra-class"><pre class="language-text"><code>git reset --hard xxxx(commit id)
+</code></pre></div><p>跳回到某次commit版本</p> <div class="language- extra-class"><pre class="language-text"><code>git log
+</code></pre></div><p>查看当前git的提交记录</p> <div class="language- extra-class"><pre class="language-text"><code>git diff
+</code></pre></div><p>查看当前的改动</p> <div class="language- extra-class"><pre class="language-text"><code>git branch
+</code></pre></div><p>查看当前分支</p> <div class="language- extra-class"><pre class="language-text"><code>git branch -D dev(分支名称)
+</code></pre></div><p>强制删除分支</p> <div class="language- extra-class"><pre class="language-text"><code>git checkout dev(分支名称)
+</code></pre></div><p>切换分支</p> <div class="language- extra-class"><pre class="language-text"><code>git checkout -b dev(分支名称)
+</code></pre></div><p>生成并切换分支</p> <div class="language- extra-class"><pre class="language-text"><code>git merge dev(分支名称)
+</code></pre></div><p>将指定分支合并到当前分支</p> <div class="language- extra-class"><pre class="language-text"><code>git checkout --orphan gh-pages
+</code></pre></div><p>创建空白分支</p> <h2 id="分支管理"><a href="#分支管理" aria-hidden="true" class="header-anchor">#</a> 分支管理</h2> <p>一般远程仓库建立以下分支：</p> <ul><li>master</li> <li>dev</li> <li>pg-pages (可选)</li></ul> <p>master分支用于大版本更新，开发者一般在dev分支上开发，若要开发新功能或者bug修正则在本地新开分支，然后合并到dev上。dev更新版本则合并到master分支上。pg-pages分支用于github仓库的静态页面展示，一般是文档。</p> <h2 id="提交信息规范"><a href="#提交信息规范" aria-hidden="true" class="header-anchor">#</a> 提交信息规范</h2> <p>可使用工具<a href="https://github.com/commitizen/cz-cli" target="_blank" rel="noopener noreferrer">commitizen<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>全局安装</p> <div class="language- extra-class"><pre class="language-text"><code>npm install -g commitizen
+</code></pre></div><p>使用npm或者yarn</p> <div class="language- extra-class"><pre class="language-text"><code>commitizen init cz-conventional-changelog --save-dev --save-exact
+</code></pre></div><p>或者</p> <div class="language- extra-class"><pre class="language-text"><code>commitizen init cz-conventional-changelog --yarn --dev --exact
+</code></pre></div><p>以后可用git cz代替git commit</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/notes/" class="prev router-link-active">
+          介绍
+        </a></span> <span class="next"><a href="/notes/vim.html">
+          vim
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.f1478fcb.js" defer></script><script src="/assets/js/2.793c0697.js" defer></script><script src="/assets/js/7.a1c899b2.js" defer></script>
+  </body>
+</html>
