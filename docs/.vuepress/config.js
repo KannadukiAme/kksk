@@ -13,6 +13,7 @@ module.exports = {
       '/notes/',
       '/notes/git',
       '/notes/vim',
+      '/notes/docker',
     ]
   },
   markdown: {
