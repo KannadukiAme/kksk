@@ -60,7 +60,9 @@ python3 install.py --tern-completer
 
 ## 配置
 
-施工中...
+.vimrc完整的配置已放在git仓库上
+
+[点击此处查看](https://github.com/KannadukiAme/vimconfig)
 
 参考链接：
 
