@@ -14,3 +14,4 @@ kksk使用[VuePress](https://vuepress.vuejs.org/)而生成
 - [ ] Vue笔记
 - [ ] Vtk.js笔记
 - [x] Docker笔记
+- [ ] Travis CI笔记
