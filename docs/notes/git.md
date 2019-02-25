@@ -89,6 +89,11 @@ git checkout --orphan gh-pages
 ```
 创建空白分支
 
+```
+git remote add origin repo(仓库地址)
+```
+添加远程仓库
+
 ## 分支管理
 
 一般远程仓库建立以下分支：
@@ -128,3 +133,33 @@ build docs
 ```
 git push -f git地址 master:gh-pages
 ```
+
+## rebase命令
+
+rebase可以编辑仓库的commit历史，每次rebase后commit的hash都会发生变化。
+
+rebase进入交互模式，编辑区间为左开右闭，（origin/master,commit id]
+
+```bash
+git rebase -i origin/master [commit id]
+```
+
+进入交互模式，可以对所有commit执行任意操作，如合并commit、编辑commit、更改commit注释等等。
+
+::: tip Note
+一般只编辑从上次更新的commit到本地最近的commit历史
+:::
+
+git pull的另一种方式，不会产生分叉commit。会将远程仓库新的commit放置在自己的commit之前。
+
+```bash
+git pull --rebase
+```
+
+## GitHub Flow
+
+建设中...
+
+## 参考链接
+
+1. [GIT团队合作探讨之四--不同工作流优缺辨析](https://www.cnblogs.com/kidsitcn/p/5329163.html)

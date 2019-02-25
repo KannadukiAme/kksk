@@ -64,7 +64,7 @@ python3 install.py --tern-completer
 
 [点击此处查看](https://github.com/KannadukiAme/vimconfig)
 
-参考链接：
+## 参考链接
 
 1. [YCM github](https://github.com/Valloric/YouCompleteMe)
 2. [Autocomplete in VIM for JS developer](https://medium.com/@rahul11061995/autocomplete-in-vim-for-js-developer-698c6275e341)
