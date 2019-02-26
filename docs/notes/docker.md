@@ -12,6 +12,12 @@ Windows平台下安装
 Docker CE需要开启Hyper-V，默认Docker会自动帮你开。一旦开启，Vitural Box会无法启用，只能关闭Hyper-V。因此，Dokcer CE和Vitural Box无法同时启动。Hyper-V在【windows功能】选择开启或关闭。
 :::
 
+Linux平台下安装
+
+```bash
+curl -sSL https://get.docker.com/ | sh
+```
+
 ## 配置
 
 需要阿里云加速器
@@ -19,6 +25,21 @@ Docker CE需要开启Hyper-V，默认Docker会自动帮你开。一旦开启，V
 注册登陆申请一个即可
 
 https://zrv2x9z2.mirror.aliyuncs.com
+
+linux下在/etc/docker/daemon.json输入以下配置
+
+```json
+{
+  "registry-mirrors":["https://zrv2x9z2.mirror.aliyuncs.com"]
+}
+```
+
+然后执行以下命令重启
+
+```
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
 
 ## 运行
 
@@ -59,9 +80,12 @@ cd node-v10.14.0
 make && make install
 ```
 
-## 删除镜像和移除容器
+## container常用操作
 
-remove
+```bash
+docker container stop [container-name] # 停止正在运行的容器
+docker container rm [container-name] # 移除已经停止的容器
+```
 
 ## 定制开发环境镜像
 
@@ -76,6 +100,18 @@ remove
 docker commit 将在运行的容器生成镜像
 
 docker save 将镜像生成tar文件
+
+## 部署常见Web服务
+
+### nginx
+
+### apache2
+
+### node
+
+### gitlab-runner
+
+### gitlab CE
 
 ## 其他
 
