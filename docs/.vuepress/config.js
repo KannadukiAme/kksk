@@ -15,7 +15,8 @@ module.exports = {
       '/notes/vim',
       '/notes/docker',
       '/notes/ssh',
-    ]
+    ],
+    lastUpdated: '最近更新'
   },
   markdown: {
     extendMarkdown: md => {
