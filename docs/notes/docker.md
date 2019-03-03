@@ -15,7 +15,7 @@ Docker CE需要开启Hyper-V，默认Docker会自动帮你开。一旦开启，V
 Linux平台下安装
 
 ```bash
-curl -sSL https://get.docker.com/ | sh
+curl -sSL https://get.docker.com/ | sh # 需root
 ```
 
 ## 配置
@@ -112,6 +112,12 @@ docker save 将镜像生成tar文件
 ### gitlab-runner
 
 ### gitlab CE
+
+安装
+
+```bash
+curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
+```
 
 ## 其他
 

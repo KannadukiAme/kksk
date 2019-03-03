@@ -10,6 +10,7 @@ kksk使用[VuePress](https://vuepress.vuejs.org/)而生成
 
 - [ ] 代码片段
 - [ ] WebGL笔记
+- [ ] tmux笔记
 - [ ] Live2D笔记
 - [ ] Vue笔记
 - [ ] Vtk.js笔记
