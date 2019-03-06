@@ -15,7 +15,7 @@ module.exports = {
       '/notes/vim',
       '/notes/docker',
       '/notes/ssh',
-      '/notes/pi3'
+      '/notes/sora'
     ],
     lastUpdated: '最近更新'
   },

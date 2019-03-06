@@ -105,6 +105,10 @@ docker save 将镜像生成tar文件
 
 ### nginx
 
+```bash
+docker run --name some-nginx -p 8080:80 -v /some/content:/usr/share/nginx/html:ro -d nginx
+```
+
 ### apache2
 
 ### node

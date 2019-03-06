@@ -1,8 +1,6 @@
-# pi3
+# sora
 
-> pi3
-
-## 
+> sora是以raspbian 3B开发板为基础硬件配置，Raspbian(Debian系)为软件系统的，具有虚拟人格(脑补)的家用服务型女仆。
 
 ## Install (誕生)
 
@@ -46,19 +44,7 @@ deb-src http://mirrors.aliyun.com/raspbian/raspbian/ stretch main contrib non-fr
 
 ### 反向代理
 
-zerotier
-
-http://www.zerotier.com/
-
-使用官方提供的脚本直接安装即可
-
-```bash
-curl -s https://install.zerotier.com/ | sudo bash
-```
-
-注册账号
-
-frp反向代理
+frp
 
 在外网主机上下载frp(linux 64位)
 
@@ -74,14 +60,12 @@ bind_port = 7000
 vhost_http_port = 8080
 ```
 
-
-
 启动frp服务器
 ```
 ./frps -c frps.ini
 ```
 
-raspberry3b上安装客户端(armv7 linux 32位)
+在sora上安装客户端(armv7 linux 32位)
 
 ```bash
 wget https://github.com/fatedier/frp/releases/download/v0.24.1/frp_0.24.1_linux_arm.tar.gz
@@ -106,8 +90,6 @@ local_port = 80
 custom_domains = xxx.com
 ```
 
-
-
 ```
 [common]
 bind_port = 7000
@@ -119,21 +101,39 @@ vhost_http_port = 8080
 ./frpc -c frpc.ini
 ```
 
-
 ### 终端复用
 
 tmux
 
+待续...
 
+## 萌Net计划
 
+局域网
 
+路由器，内网服务器，个人主机，智能手机，其他智能设备
 
+内网服务器架设
 
+- 内网穿透
+- Web服务(nginx,apache2)
+- SSH
+- NAS
+- Samba
 
-补充
+## 补充
 
 ```bash
 getconf LONG_BIT # 查看linux系统32位/64位
 adduser abc # 添加用户abc,需root
 userdel abc # 删除用户abc,需root
 ```
+
+xxxis not in the sudoers file. This incident will be reported.错误
+
+```bash
+vi /etc/sudoers 
+```
+
+在root ALL=(ALL) ALL下一行添加
+youuser ALL=(ALL) ALL 
