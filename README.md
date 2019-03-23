@@ -6,18 +6,19 @@
 
 安装依赖
 
-```
+```bash
 yarn
 ```
 
-开发模式
+运行
 
-```
-yarn docs:dev
+```bash
+yarn docs:dev # 开发模式
+yarn docs:build # 生产模式
 ```
 
-构建
+## 引用
 
-```
-yarn docs:build
-```
+1. [PON COLORS - 日本の伝統色](http://nipponcolors.com/)
+2. [とある櫻花の画像生成（ジェネレーター）- とある風画像を自動生成](http://to-a.ru/)
+3. [VuePress 1.x](https://v1.vuepress.vuejs.org/zh/)

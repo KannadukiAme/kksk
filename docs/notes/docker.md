@@ -101,6 +101,17 @@ docker commit 将在运行的容器生成镜像
 
 docker save 将镜像生成tar文件
 
+## docker-compose的使用
+
+编排2个以上的容器需要编写docker-compose.yml
+
+基本操作
+
+```bash
+docker-compose up -d # 以后台方式启动容器
+docker-compose down # 关闭启动的容器
+```
+
 ## 部署常见Web服务
 
 ### nginx
@@ -117,10 +128,16 @@ docker run --name some-nginx -p 8080:80 -v /some/content:/usr/share/nginx/html:r
 
 ### gitlab CE
 
-安装
-
 ```bash
-curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
+docker run --detach \
+	--hostname gitlab.example.com \
+	--publish 443:443 --publish 80:80 --publish 22:22 \
+	--name gitlab \
+	--restart always \
+	--volume /srv/gitlab/config:/etc/gitlab \
+	--volume /srv/gitlab/logs:/var/log/gitlab \
+	--volume /srv/gitlab/data:/var/opt/gitlab \
+	gitlab/gitlab-ce:latest
 ```
 
 ## 其他

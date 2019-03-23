@@ -1,6 +1,9 @@
 module.exports = {
   title: 'kksk',
   description: 'some notes for web dev...',
+  head: [
+    ['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css', integrity: 'sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf', crossorigin: 'anonymous' }]
+  ],
   base: '/kksk/',
   dest: './dist',
   themeConfig: {
@@ -23,5 +26,6 @@ module.exports = {
     extendMarkdown: md => {
       md.use(require('markdown-it-task-lists'))
     }
-  }
+  },
+  plugins: ['@vuepress/nprogress', '@vuepress/back-to-top']
 }
