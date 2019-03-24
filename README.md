@@ -24,4 +24,5 @@ yarn docs:build # 生产模式
 1. [PON COLORS - 日本の伝統色](http://nipponcolors.com/)
 2. [とある櫻花の画像生成（ジェネレーター）- とある風画像を自動生成](http://to-a.ru/)
 3. [VuePress 1.x](https://v1.vuepress.vuejs.org/zh/)
-
+4. [获取徽章](https://shields.io/)
+5. [git仓库添加Licence](https://help.github.com/en/articles/adding-a-license-to-a-repository)
