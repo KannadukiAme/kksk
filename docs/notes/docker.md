@@ -36,55 +36,25 @@ linux下在/etc/docker/daemon.json输入以下配置
 
 然后执行以下命令重启
 
-```
+```bash
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
-## 运行
-
-以部署node应用为例：
-
-```
-# 下载node官方镜像
-docker pull node
-# 挂载本机node应用(source指定的目录必须是绝对路径)（将容器8080端口映射到本机8080端口)(分配bash)
-docker run -it -p 8080:8080 --mount type=bind,source=E:\TestCode\eggvue,target=/app node /bin/bash
-# 安装依赖、build、start
-yarn
-yarn build
-yarn start
-# 本机访问
-http://localhost:8080
-```
-
-## 创建容器
-
-```
-FROM centos
-RUN yum update -y
-RUN yum install wget -y
-RUN yum -y install gcc
-
-# 安装nodejs
-RUN wget https://nodejs.org/dist/v10.14.0/node-v10.14.0-linux-x64.tar.xz
-RUN unxz node-v10.14.0-linux-x64.tar.xz
-RUN tar xvf node-v10.14.0-linux-x64.tar
-
-# 编译nodejs
-yum -y install gcc make gcc-c++ openssl-devel wget
-wget https://nodejs.org/dist/v10.14.0/node-v10.14.0.tar.gz
-tar -zxf node-v10.14.0.tar.gz
-cd node-v10.14.0
-./configure
-make && make install
-```
-
-## container常用操作
+## docker常用命令
 
 ```bash
+docker pull [image-name] # 拉取指定的docker镜像
+docker images # 列出已经拉取的docker镜像
+docker image ls # 列出已经拉取的docker镜像
+docker ps # 列出正在运行的容器
+docker contianer ls # 列出正在运行的容器
+docker ps -a # 列出所有容器
 docker container stop [container-name] # 停止正在运行的容器
+docker container kill [container-name] # 杀死正在运行的容器(不安全)
 docker container rm [container-name] # 移除已经停止的容器
+docker exec -it [container-name] bash # 进入容器并执行bash命令(常用于操作容器内部)
+docker run -p 80:80 --name [some-name] -d -v /xxx:/docker [container-name] # 启动指定容器，映射端口和数据卷，指定名称，后台运行
 ```
 
 ## 定制开发环境镜像
@@ -93,23 +63,42 @@ docker container rm [container-name] # 移除已经停止的容器
 
 1.使用commit保存镜像
 
-2.使用dockerfile定制
+2.使用dockerfile脚本构建镜像
+
+::: tip Note
+一般建议生产环境下使用dockerfile构建镜像
+:::
 
 ## 镜像备份与迁移
 
-docker commit 将在运行的容器生成镜像
-
-docker save 将镜像生成tar文件
+```bash
+docker commit # 将在运行的容器生成镜像
+docker save # 将镜像生成tar文件
+```
 
 ## docker-compose的使用
 
-编排2个以上的容器需要编写docker-compose.yml
+编排2个以上的容器建议使用docker-compose
 
 基本操作
 
 ```bash
 docker-compose up -d # 以后台方式启动容器
 docker-compose down # 关闭启动的容器
+```
+
+例如nginx镜像的docker-compse.yml文件模板如下
+
+```yaml
+version: "3"
+services:
+	nginx:
+		image: nginx
+		volumes:
+			- /some/content:/usr/share/nginx/html:ro
+		ports:
+			- "8080:80"
+		restart: always
 ```
 
 ## 部署常见Web服务
@@ -140,10 +129,14 @@ docker run --detach \
 	gitlab/gitlab-ce:latest
 ```
 
+## docker容器互联
+
+待续...
+
 ## 其他
 
 ### 获取Docker容器所有IP地址
 
-```
+```bash
 docker inspect -f '{{.Name}} - {{.NetworkSettings.IPAddress }}' $(docker ps -aq)
 ```
