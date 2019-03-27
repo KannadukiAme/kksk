@@ -1,5 +1,5 @@
 <template>
-  <ParentHome/>
+  <ParentHome />
 </template>
 
 <style lang="stylus">

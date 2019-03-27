@@ -9,16 +9,31 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '笔记', link: '/notes/' },
+      { text: '技术笔记', link: '/notes/git' },
+      { text: '个人偏好', link: '/perferences/vscode' },
       { text: 'Git', link: 'https://github.com/KannadukiAme/kksk.git' }
     ],
     sidebar: [
-      '/notes/',
-      '/notes/git',
-      '/notes/vim',
-      '/notes/docker',
-      '/notes/ssh',
-      '/notes/sora'
+      {
+        title: '技术笔记',   // 必要的
+        collapsable: false, // 可选的, 默认值是 true,
+        sidebarDepth: 2,    // 可选的, 默认值是 1
+        children: [
+          '/notes/git',
+          '/notes/vim',
+          '/notes/docker',
+          '/notes/ssh',
+          '/notes/sora'
+        ]
+      },
+      {
+        title: '个人偏好',
+        collapsable: false,
+        sidebarDepth: 1,
+        children: [
+          '/perferences/vscode'
+        ]
+      }
     ],
     lastUpdated: '最近更新'
   },
