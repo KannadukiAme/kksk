@@ -1,5 +1,5 @@
 ---
-home: true
+layout: Home
 heroImage: /logo.png
 heroText: 某CODER的禁书目录
 tagline: 真·WEB开发技术笔记
