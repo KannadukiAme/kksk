@@ -23,7 +23,8 @@ module.exports = {
           '/notes/vim',
           '/notes/docker',
           '/notes/ssh',
-          '/notes/sora'
+          '/notes/sora',
+          '/notes/webpack'
         ]
       },
       {
