@@ -139,7 +139,7 @@ docker run --detach \
 
 Dockerfile如下
 
-```dockerfile
+```bash
 FROM node:11-alpine as build-stage
 
 WORKDIR /app
