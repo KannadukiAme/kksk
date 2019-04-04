@@ -133,6 +133,32 @@ docker run --detach \
 
 待续...
 
+## docker多阶段构建
+
+以vue项目在node容器构建，并部署到nginx服务为例
+
+Dockerfile如下
+
+```dockerfile
+FROM node:11-alpine as build-stage
+
+WORKDIR /app
+
+COPY . .
+
+RUN ls & \
+    yarn & \
+    yarn build
+
+FROM nginx:1.15-alpine as depoly-stage
+
+COPY --from=0 /app/dist/app /usr/share/nginx/html
+```
+
+::: tip Note
+将上一个容器构建的输出作为下一个容器的输入是多阶段构建的关键之处
+:::
+
 ## 其他
 
 ### 获取Docker容器所有IP地址
