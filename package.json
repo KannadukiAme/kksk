@@ -7,10 +7,10 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.46",
-    "@vuepress/plugin-nprogress": "^1.0.0-alpha.46",
+    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.47",
+    "@vuepress/plugin-nprogress": "^1.0.0-alpha.47",
     "markdown-it-task-lists": "^2.1.1",
-    "vuepress": "^1.0.0-alpha.46"
+    "vuepress": "^1.0.0-alpha.47"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
