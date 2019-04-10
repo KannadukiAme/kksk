@@ -13,7 +13,7 @@
 
 <style lang="stylus" scoped>
 .parallax
-  background-image url('../../../img/kancolle_8807.jpg')
+  background-image url('../../../img/duotone.png')
   // opacity 0.5
   height 100vh
   background-attachment fixed
@@ -21,7 +21,7 @@
   background-repeat no-repeat
   background-size cover
   z-index -1
-  background-position-y $headerHeight
+  // background-position-y $headerHeight
 .home
   height 100%
 </style>

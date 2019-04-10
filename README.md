@@ -19,6 +19,10 @@ yarn docs:dev # 开发模式
 yarn docs:build # 生产模式
 ```
 
+## 参考设计
+
+1. https://boku-ben.com/
+
 ## 引用
 
 1. [PON COLORS - 日本の伝統色](http://nipponcolors.com/)
