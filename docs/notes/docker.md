@@ -55,6 +55,7 @@ docker container kill [container-name] # 杀死正在运行的容器(不安全)
 docker container rm [container-name] # 移除已经停止的容器
 docker exec -it [container-name] bash # 进入容器并执行bash命令(常用于操作容器内部)
 docker run -p 80:80 --name [some-name] -d -v /xxx:/docker [container-name] # 启动指定容器，映射端口和数据卷，指定名称，后台运行
+docker build -t [image-name] . # 使用Dockerfile构建并指定镜像名称
 ```
 
 ## 定制开发环境镜像
@@ -131,7 +132,30 @@ docker run --detach \
 
 ## docker容器互联
 
-待续...
+```bash
+# 创建自定义docker网络my-net
+docker create network -d bridge my-net
+
+# 开启两个容器连入自定义docker网络
+docker run -it --name alpine1 --network my-net alpine:3.8
+docker run -it --name alpine2 --network my-net alpine:3.8
+```
+
+docker-compose写法如下
+```yaml
+version: "3"
+services:
+  a1:
+    image: alpine:3.8
+    networks:
+      - my-net
+  a2:
+    image: alpine:3.8
+    networks:
+      - my-net
+networks:
+  my-net:
+```
 
 ## docker多阶段构建
 
