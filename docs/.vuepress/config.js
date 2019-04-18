@@ -32,7 +32,8 @@ module.exports = {
         collapsable: false,
         sidebarDepth: 1,
         children: [
-          '/perferences/vscode'
+          '/perferences/vscode',
+          '/perferences/code-style'
         ]
       }
     ],
