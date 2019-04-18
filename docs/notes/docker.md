@@ -9,7 +9,7 @@ Windows平台下安装
 例如:https://store.docker.com/editions/community/docker-ce-desktop-windows
 
 ::: tip Note
-Docker CE需要开启Hyper-V，默认Docker会自动帮你开。一旦开启，Vitural Box会无法启用，只能关闭Hyper-V。因此，Dokcer CE和Vitural Box无法同时启动。Hyper-V在【windows功能】选择开启或关闭。
+Win10的Docker CE需要开启Hyper-V，默认Docker会自动帮你开。一旦开启，Vitural Box会无法启用，只能关闭Hyper-V。因此，Dokcer CE和Vitural Box无法同时启动。Hyper-V在【windows功能】选择开启或关闭。
 :::
 
 Linux平台下安装
