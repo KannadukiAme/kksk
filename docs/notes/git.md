@@ -180,3 +180,4 @@ git仓库项目开发规范：
 ## 参考链接
 
 1. [GIT团队合作探讨之四--不同工作流优缺辨析](https://www.cnblogs.com/kidsitcn/p/5329163.html)
+2. [Git Community Book 中文版-rebase](http://gitbook.liuhui998.com/4_2.html)
