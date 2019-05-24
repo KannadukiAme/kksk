@@ -99,7 +99,8 @@ services:
 			- /some/content:/usr/share/nginx/html:ro
 		ports:
 			- "8080:80"
-		restart: always
+    restart: always
+    command: # docker run ... command
 ```
 
 ## 部署常见Web服务
