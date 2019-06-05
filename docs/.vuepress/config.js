@@ -24,7 +24,8 @@ module.exports = {
           '/notes/docker',
           '/notes/ssh',
           '/notes/sora',
-          '/notes/webpack'
+          '/notes/webpack',
+          '/notes/manjaro'
         ]
       },
       {
