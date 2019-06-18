@@ -1,62 +1,93 @@
 # manjaro
 
-> 记录manjaro安装、配置和使用
+> 记录manjaro-i3安装、配置和使用
 
-## 配置
+## 系统安装
 
-替换源并更新
+下载manjaro-i3镜像
 
-```
+根据向导提示操作
+
+## 系统配置
+
+### 源配置
+
+```bash
+# 更换China源 并 更新
 pacman-mirrors -c China
 pacman -Syu
 ```
 
-## 安装
+### AUR配置
 
-1.选择manjaro-i3镜像
-
-2.安装环境
-
-git
-
-```
-pacman -S git
+```bash
+yay -S xxxx
 ```
 
-日中字体
+### 语言设置
 
-中文字体列表
+### 输入法
 
-adobe-source-han-sans-otc-fonts
-adobe-source-han-serif-otc-fonts
+```bash
+# 安装输入法及配置工具
+pacman -S fcitx-im fcitx-configtool
 
-日文字体列表
-
-adobe-source-han-sans-jp-fonts
-otf-ipafont
-ttf-hanazono
-ttf-sazanami(无维护)
-ttf-vlgothic(AUR)
-ttf-mplus(AUR)
-ttf-monapo(AUR)
-
-中文输入法
-
-
-firefox
-
-```
-pacman -S firefox
+# 安装日文输入法
+pacman -S fcitx-mozc
 ```
 
-vscode
+```bash
+# ~/.profile
 
-```
-pacman -S code
+# 开机启动输入法
+fcitx -d
 ```
 
-docker docker-compose
+### 字体
 
+```bash
+# 安装字体
+pacman -S adobe-source-han-sans-otc-fonts
 ```
-pacman -S docker docker-compose
+
+### 壁纸更换
+
+自带nitrogen有GUI界面无需配置
+
+### uRxvt配置
+
+```bash
+# ~/.Xresources
+
+# 英文字体推荐Dejavu
+
+# 中日韩字体推荐Source Han Sans
+
+# 编辑完后需要重新加载
+xrdb ~/.Xresources
+```
+
+### i3配置
+
+```bash
+
+# 编辑完后需要重新加载
+# Super + Shift + R
+i3 reload
+```
+
+### conky配置
+
+```bash
+# /usr/share/conky/*
+```
+
+## 开发环境
+
+```bash
+# VSCode
+# Node.js
+# Docker
+# Firefox
+pacman -S code node docker docker-compose firefox
 ```
