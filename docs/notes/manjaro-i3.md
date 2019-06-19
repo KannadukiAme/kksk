@@ -26,6 +26,11 @@ yay -S xxxx
 
 ### 语言设置
 
+```bash
+# 设置中文
+localectl set-locale zh_CN.UTF-8
+```
+
 ### 输入法
 
 ```bash
@@ -46,8 +51,8 @@ fcitx -d
 ### 字体
 
 ```bash
-# 安装字体
-pacman -S adobe-source-han-sans-otc-fonts
+# 安装中文字体
+pacman -S wqy-microhei
 ```
 
 ### 壁纸更换
@@ -61,7 +66,7 @@ pacman -S adobe-source-han-sans-otc-fonts
 
 # 英文字体推荐Dejavu
 
-# 中日韩字体推荐Source Han Sans
+# 中文字体推荐WenQuanYi Micro Hei Mono
 
 # 编辑完后需要重新加载
 xrdb ~/.Xresources
@@ -69,11 +74,18 @@ xrdb ~/.Xresources
 
 ### i3配置
 
+i3wm
 ```bash
+# ~/.i3/config
 
 # 编辑完后需要重新加载
 # Super + Shift + R
 i3 reload
+```
+
+i3status
+```bash
+# /etc/i3status.conf
 ```
 
 ### conky配置

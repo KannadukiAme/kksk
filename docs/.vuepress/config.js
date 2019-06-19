@@ -25,7 +25,7 @@ module.exports = {
           '/notes/ssh',
           '/notes/sora',
           '/notes/webpack',
-          '/notes/manjaro'
+          '/notes/manjaro-i3'
         ]
       },
       {
