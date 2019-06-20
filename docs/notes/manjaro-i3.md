@@ -10,6 +10,13 @@
 
 ## 系统配置
 
+### 代理配置
+
+```bash
+export http_proxy=http://xxxx
+export https_proxy=http://xxxx
+```
+
 ### 源配置
 
 ```bash
