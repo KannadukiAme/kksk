@@ -14,6 +14,9 @@
 - Vetur (Vue支持)
 - language-stylus (stylus支持)
 - Manta's Stylus Supremacy (stylus格式化)
+- GitLens
+- VSC Mikutap (music)
+- Debugger for Chrome (调试工具)
 
 ## 配置文件
 
