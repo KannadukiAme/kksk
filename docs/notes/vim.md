@@ -64,6 +64,11 @@ python3 install.py --tern-completer
 
 [点击此处查看](https://github.com/KannadukiAme/vimconfig)
 
+## 操作
+
+cheat sheet
+![vi-vim-cheat-sheet](../img/vi-vim-cheat-sheet.gif)
+
 ## 参考链接
 
 1. [YCM github](https://github.com/Valloric/YouCompleteMe)
