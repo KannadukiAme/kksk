@@ -1,4 +1,4 @@
-# manjaro
+# manjaro-i3
 
 > 记录manjaro-i3安装、配置和使用
 
@@ -102,4 +102,22 @@ i3status
 # Docker
 # Firefox
 pacman -S code node docker docker-compose firefox
+```
+
+## Vbox虚拟机共享数据
+
+安装VirtualBox Guest Additions
+
+```bash
+pacman -S virtualbox-guest-utils
+pacman -S virtualbox-guest-modules-arch
+```
+
+此时双向复制粘贴是可用的
+
+然后在VirutalBox设置共享文件夹名称和挂载点后
+
+```bash
+#源文件夹名称 挂载点
+sudo mount -t vboxsf Share /home/madoka/Share/
 ```
