@@ -62,9 +62,15 @@ fcitx -d
 pacman -S wqy-microhei
 ```
 
-### 壁纸更换
+### 壁纸
 
-自带nitrogen有GUI界面无需配置
+桌面壁纸
+
+* nitrogen
+
+登陆界面壁纸
+
+* lightdm-settings
 
 ### uRxvt配置
 
@@ -94,6 +100,10 @@ i3status
 ```bash
 # /etc/i3status.conf
 ```
+
+i3bar透明设置
+
+...
 
 ### conky配置
 
