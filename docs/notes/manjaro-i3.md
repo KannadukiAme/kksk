@@ -44,6 +44,9 @@ localectl set-locale zh_CN.UTF-8
 # 安装输入法及配置工具
 pacman -S fcitx-im fcitx-configtool
 
+# 安装中文输入法
+pacman -S fcitx-googlepinyin
+
 # 安装日文输入法
 pacman -S fcitx-mozc
 ```
@@ -51,8 +54,14 @@ pacman -S fcitx-mozc
 ```bash
 # ~/.profile
 
-# 开机启动输入法
+# set fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
+# start fcitx
 fcitx -d
+
 ```
 
 ### 字体
