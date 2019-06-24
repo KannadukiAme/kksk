@@ -97,8 +97,12 @@ xrdb ~/.Xresources
 ### i3配置
 
 i3wm
+
 ```bash
 # ~/.i3/config
+
+# i3bar透明设置
+i3bar_command i3bar -t
 
 # 编辑完后需要重新加载
 # Super + Shift + R
@@ -106,18 +110,100 @@ i3 reload
 ```
 
 i3status
+
 ```bash
 # /etc/i3status.conf
 ```
-
-i3bar透明设置
-
-...
 
 ### conky配置
 
 ```bash
 # /usr/share/conky/*
+```
+
+利用conky配置i3bar
+
+```bash
+# ~/.conkyrc
+
+conky.config = {
+    out_to_x = false,
+    own_window = false,
+    out_to_console = true,
+    background = false,
+    max_text_width = 0,
+
+    -- Update interval in seconds
+    update_interval = 1.0,
+
+    -- This is the number of times Conky will update before quitting.
+    -- Set to zero to run forever.
+    total_run_times = 0,
+
+    -- Shortens units to a single character (kiB->k, GiB->G, etc.). Default is off.
+    short_units = true,
+
+    -- How strict should if_up be when testing an interface for being up?
+    -- The value is one of up, link or address, to check for the interface
+    -- being solely up, being up and having link or being up, having link
+    -- and an assigned IP address.
+    if_up_strictness = 'address',
+
+    -- Add spaces to keep things from moving about?  This only affects certain objects.
+    -- use_spacer should have an argument of left, right, or none
+    use_spacer = 'left',
+
+    -- Force UTF8? note that UTF8 support required XFT
+    override_utf8_locale = true,
+
+    -- number of cpu samples to average
+    -- set to 1 to disable averaging
+    cpu_avg_samples = 2,
+};
+
+conky.text = [[
+# JSON for i3bar
+[
+  { "full_text" : "CPU ${cpu}%", "color" : "\#FFFFFF", "separator": false  },
+  { "full_text" : "MEMORY ${mem}/${memmax}",  "color" : "\#FFFFFF", "separator": false  },
+  { "full_text" : "HDD ${fs_used /}/${fs_size /}", "separator": false},
+  { "full_text" : "IP ${addrs enp0s3}", "separator": false},
+  { "full_text" : "Up ${upspeed enp0s3} - Down ${downspeed enp0s3}","separator": false},
+  { "full_text": " ${time %Y/%m/%d(%a)}",  "separator": false  },
+  { "full_text": " ${time %H:%M:%S}",  "separator": false  },
+  ${if_match "${acpiacadapter}" == "on-line" }
+  { "full_text": " ${battery_percent BAT1}%", "color": "\#FFBF7F",  "separator": false }
+  ${else}
+  { "full_text": " ${battery_percent BAT1}%", "color": "\#ffff4c",  "separator": false  }
+  ${endif}
+],
+]]
+```
+
+```bash
+# ~/.conky_i3bar.sh
+
+#!/bin/sh
+
+# Send the header so that i3bar knows we want to use JSON:
+echo '{"version":1}'
+
+# Begin the endless array.
+echo '['
+
+# We send an empty first array of blocks to make the loop simpler:
+echo '[],'
+
+# Now send blocks with information forever:
+exec conky -c /home/madoka/.conkyrc
+```
+
+```bash
+# ~/.i3/config
+
+bar {
+  status_command $HOME/conky_i3bar.sh
+}
 ```
 
 ## 开发环境
