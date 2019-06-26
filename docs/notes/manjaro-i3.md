@@ -205,6 +205,12 @@ bar {
   status_command $HOME/conky_i3bar.sh
 }
 ```
+## 网络环境
+
+```bash
+# ssr
+yay -S electron-ssr
+```
 
 ## 开发环境
 
