@@ -115,6 +115,16 @@ i3status
 # /etc/i3status.conf
 ```
 
+
+配置rofi替换dmenu
+```bash
+#安装rofi
+pacman -S rofi
+
+#替换i3dmenu
+bindsym $mod+d exec --no-startup-id "rofi -show drun -font \\"WenQuanYi Micro Hei Mono 9\\" -run-shell-command '{terminal} -e \\" {cmd}; read -n 1 -s\\"'"
+
+```
 ### conky配置
 
 ```bash
@@ -205,6 +215,7 @@ bar {
   status_command $HOME/conky_i3bar.sh
 }
 ```
+
 ## 网络环境
 
 ```bash
@@ -239,3 +250,7 @@ pacman -S virtualbox-guest-modules-arch
 #源文件夹名称 挂载点
 sudo mount -t vboxsf Share /home/madoka/Share/
 ```
+
+## 参考链接
+
+1. [Rofi](https://wiki.archlinux.org/index.php/Rofi)
