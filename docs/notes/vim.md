@@ -69,6 +69,12 @@ python3 install.py --tern-completer
 cheat sheet
 ![vi-vim-cheat-sheet](../img/vi-vim-cheat-sheet.gif)
 
+## 浏览器使用vim-like操作
+
+firefox安装vimium-ff插件
+
+chrome安装vimium插件
+
 ## 参考链接
 
 1. [YCM github](https://github.com/Valloric/YouCompleteMe)
