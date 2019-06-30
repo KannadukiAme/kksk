@@ -18,6 +18,10 @@ Linux平台下安装
 curl -sSL https://get.docker.com/ | sh # 需root
 ```
 
+::: warning 注意事项
+manjaro无法使用这种方式安装，直接使用pacman安装即可
+:::
+
 ## 配置
 
 需要阿里云加速器
