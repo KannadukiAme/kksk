@@ -233,6 +233,31 @@ yay -S electron-ssr
 pacman -S code node docker docker-compose firefox
 ```
 
+## dd写镜像
+
+```bash
+dd bs=4M if=~/xxx.img of=/dev/sda
+```
+
+::: warning 注意事项
+写入的/dev/sda不要挂载分区
+:::
+
+## 分区
+
+```bash
+# 查看当前挂载分区
+df
+
+# 查看所有分区
+lsblk
+
+# 分区
+gdisk /dev/sda
+
+# o新建GPT分区表,n新建分区,w写入分区
+```
+
 ## Vbox虚拟机共享数据
 
 安装VirtualBox Guest Additions
