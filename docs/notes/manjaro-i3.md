@@ -258,6 +258,27 @@ gdisk /dev/sda
 # o新建GPT分区表,n新建分区,w写入分区
 ```
 
+## Powerline配置
+
+### Install
+
+```bash
+pacman -S powerline powerline-fonts
+```
+
+### For bash
+
+```bash
+# ~/.bashrc
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /usr/share/powerline/bindings/bash/powerline.sh
+
+# reload bash
+source ~/.bashrc
+```
+
 ## Vbox虚拟机共享数据
 
 安装VirtualBox Guest Additions
@@ -279,3 +300,4 @@ sudo mount -t vboxsf Share /home/madoka/Share/
 ## 参考链接
 
 1. [Rofi](https://wiki.archlinux.org/index.php/Rofi)
+2. [Powerline](https://wiki.archlinux.org/index.php/Powerline)
