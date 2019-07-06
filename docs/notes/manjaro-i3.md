@@ -279,6 +279,19 @@ POWERLINE_BASH_SELECT=1
 source ~/.bashrc
 ```
 
+***VSCode***
+
+对于VSCode terminal会有乱码，则需要配置字体
+
+添加字体如下:
+
+```bash
+# 查看powerline字体
+fc-list | grep "Powerline"
+
+# 在VSCode设置中的字体添加PowerlineSymbols即可
+```
+
 ## Vbox虚拟机共享数据
 
 安装VirtualBox Guest Additions
