@@ -14,6 +14,17 @@ Linux/Unix:
 
 终端自带ssh命令
 
+## ssh配置
+
+Linux(Arch):
+
+```bash
+# /etc/ssh/sshd_config
+
+# 允许root登录
+PermitRootLogin yes
+```
+
 ## ssh登陆
 
 ssh登陆的两种方式
