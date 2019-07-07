@@ -108,3 +108,11 @@ xshell设置指定私钥文件即可登陆。
 authorized_keys的权限 600
 
 :::
+
+## ssh清理缓存
+
+```bash
+# ~/.ssh/known_hosts
+
+删除对应IP的密钥即可
+```
