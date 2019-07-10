@@ -18,6 +18,15 @@ combined-squashfs.img.gz(win)
 VBoxManage convertfromraw --format VDI lede-x86-64-combined-squashfs.img lede-x86-64-combined-squashfs.vdi
 ```
 
+::: warning 注意事项
+VirtualBox需要img镜像512字节对齐
+:::
+
+```bash
+# img镜像512字节对齐
+dd if=openwrt-x86-64-combined-squashfs.img of=new.img bs=512 conv=sync
+```
+
 #### 新建虚拟机
 
 ***具体细节待完善***
