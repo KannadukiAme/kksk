@@ -53,6 +53,10 @@ option http_proxy http://xxx
 opkg install luci
 ```
 
+#### 编译固件
+
+***待续***
+
 ## 参考链接
 
 1. [在Virtualbox虚拟机中运行OpenWrt](https://openwrt.org/zh/docs/guide-user/virtualization/virtualbox-vm)
