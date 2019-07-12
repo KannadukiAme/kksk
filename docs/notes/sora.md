@@ -1,5 +1,9 @@
 # sora
 
+::: danger 废弃
+这篇笔记被标记为废弃，永久不再更新，但作为存档永久保留
+:::
+
 > sora是以raspbian 3B开发板为基础硬件配置，Raspbian(Debian系)为软件系统的，具有虚拟人格(脑补)的家用服务型女仆。
 
 ## Install (誕生)
@@ -132,8 +136,8 @@ userdel abc # 删除用户abc,需root
 xxxis not in the sudoers file. This incident will be reported.错误
 
 ```bash
-vi /etc/sudoers 
+vi /etc/sudoers
 ```
 
 在root ALL=(ALL) ALL下一行添加
-youuser ALL=(ALL) ALL 
+youuser ALL=(ALL) ALL
