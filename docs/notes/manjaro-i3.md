@@ -249,6 +249,12 @@ dd bs=4M if=~/xxx.img of=/dev/sda
 # 查看当前挂载分区
 df
 
+#挂载
+sudo mount /dev/sda1 /data
+
+#卸载
+sudo umount -v /dev/sda1
+
 # 查看所有分区
 lsblk
 
