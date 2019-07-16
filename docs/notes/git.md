@@ -4,95 +4,88 @@
 
 ## 常用操作命令
 
-```
+```bash
+# 初始化git项目（生成.git文件夹）
 git init
-```
-初始化git项目（生成.git文件夹）
 
-```
+# 克隆远程git项目（一般支持https和ssh两种协议）
 git clone https://xxxxxx
-```
-克隆远程git项目（一般支持https和ssh两种协议）
 
-```
+# 拉取指定远程分支到本地分支（若本地分支和远程名称一致，可省略）
 git pull origin(本地分支) master(远程分支)
-```
-拉取指定远程分支到本地分支（若本地分支和远程名称一致，可省略）
 
-```
+# 推送指定远程分支到本地分支（若本地分支和远程名称一致，可省略）
 git push origin(本地分支) master(远程分支)
-```
-推送指定远程分支到本地分支（若本地分支和远程名称一致，可省略）
 
-```
+# 强制推送（一般用于撤销某些不需要的commit，需谨慎使用）
 git push origin(本地分支) master(远程分支) --force
-```
-强制推送（一般用于撤销某些不需要的commit，需谨慎使用）
 
-```
+# 添加所有文件到工作区
 git add -A
-```
-添加所有文件到工作区
 
-```
+# 将工作区的改动提交
 git commit -m "提交说明"
-```
-将工作区的改动提交
 
-```
+# 重置到某次commit，但保留修改
+git reset xxxx(commit id)
+
+# 重置到当前最新提交的版本，丢失当前修改
 git reset --hard
-```
-丢弃当前所有改动，重置到当前最新提交的版本
 
-```
+# 重置到某次commit，丢失当前修改
 git reset --hard xxxx(commit id)
-```
-跳回到某次commit版本
 
-```
+# 查看当前git的提交记录
 git log
-```
-查看当前git的提交记录
 
-```
+# 查看当前的改动
 git diff
-```
-查看当前的改动
 
-```
+# 查看当前分支
 git branch
-```
-查看当前分支
 
-```
+# 强制删除分支
 git branch -D dev(分支名称)
-```
-强制删除分支
 
-```
+# 切换分支
 git checkout dev(分支名称)
-```
-切换分支
 
-```
+# 生成并切换分支
 git checkout -b dev(分支名称)
-```
-生成并切换分支
 
-```
+# 将指定分支合并到当前分支
 git merge dev(分支名称)
-```
-将指定分支合并到当前分支
 
-```
+# 创建空白分支
 git checkout --orphan gh-pages
-```
-创建空白分支
 
-```
+# 添加远程仓库
 git remote add origin repo(仓库地址)
+
+# 查看git操作历史(用于恢复误删commit)
+git reflog
+
+# 新建tag v0.1到当前commit
+git tag v0.1
+
+# 新建tag v0.1并标注信息
+git tag -a v0.1 -m "0.1 version"
+
+# 删除某一个tag
+git tag -d v0.1
+
+# 列出当前所有tag
+git tag
+
+# 显示某个tag信息
+git show v0.1
+
+# 推送某一个tag
+git push origin v0.1
+
+# 推送所有tag
+git push origin --tags
 ```
-添加远程仓库
 
 ## 分支管理
 
