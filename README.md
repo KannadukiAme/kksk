@@ -1,8 +1,8 @@
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/KannadukiAme/kksk/master.svg?style=flat-square) ![Travis (.com) branch](https://img.shields.io/travis/com/KannadukiAme/kksk/master.svg?style=flat-square) ![Website](https://img.shields.io/website/https/kannadukiame.github.io/kksk.svg?style=flat-square) ![GitHub](https://img.shields.io/github/license/KannadukiAme/kksk.svg?style=flat-square) ![GitHub repo size](https://img.shields.io/github/repo-size/KannadukiAme/kksk.svg?style=flat-square) ![Twitter Follow](https://img.shields.io/twitter/follow/Kannaduki_Ame.svg?style=flat-square)
-
 # kksk
 
-> 记录Web开发技术实践过程中的一些笔记
+> 一个魔法少女的魔法（Web Development）笔记
+
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/KannadukiAme/kksk/master.svg?style=flat-square) ![Travis (.com) branch](https://img.shields.io/travis/com/KannadukiAme/kksk/master.svg?style=flat-square) ![Website](https://img.shields.io/website/https/kannadukiame.github.io/kksk.svg?style=flat-square) ![GitHub](https://img.shields.io/github/license/KannadukiAme/kksk.svg?style=flat-square) ![GitHub repo size](https://img.shields.io/github/repo-size/KannadukiAme/kksk.svg?style=flat-square) ![Twitter Follow](https://img.shields.io/twitter/follow/Kannaduki_Ame.svg?style=flat-square)
 
 ## 食用方法
 
