@@ -28,6 +28,7 @@ module.exports = {
           '/notes/webpack',
           '/notes/manjaro-i3',
           '/notes/openwrt',
+          '/notes/arch',
         ]
       },
       {
