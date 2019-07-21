@@ -316,6 +316,19 @@ pacman -S virtualbox-guest-modules-arch
 sudo mount -t vboxsf Share /home/madoka/Share/
 ```
 
+## ISSUE
+
+1. manjaro的终端链接ssh时，退格键会失效。
+
+如下配置bashrc即可
+
+```bash
+# ~/.bashrc
+
+# term
+export TERM=ansi
+```
+
 ## 参考链接
 
 1. [Rofi](https://wiki.archlinux.org/index.php/Rofi)
