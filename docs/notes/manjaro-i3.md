@@ -329,6 +329,17 @@ sudo mount -t vboxsf Share /home/madoka/Share/
 export TERM=ansi
 ```
 
+## TIP
+
+在终端中输入command时
+
+| 快捷键 | 说明               |
+| ------ | ------------------ |
+| Ctrl+A | 跳转到第一个字符   |
+| Ctrl+E | 跳转到最后一个字符 |
+
+
+
 ## 参考链接
 
 1. [Rofi](https://wiki.archlinux.org/index.php/Rofi)
