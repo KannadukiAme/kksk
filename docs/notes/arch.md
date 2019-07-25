@@ -60,7 +60,7 @@ swapon /dev/sdX2
 
 ### 安装base包
 
-### 设置源
+#### 设置源
 
 [mirrors生成器](https://www.archlinux.org/mirrorlist/)
 
@@ -72,11 +72,21 @@ swapon /dev/sdX2
 Server = xxxx
 ```
 
-### base
+#### base
 
 ```bash
 # 安装base
 pacstrap /mnt base
+```
+
+#### config
+
+```bash
+# 生成fstab配置
+genfstab -U /mnt >> /mnt/etc/fstab
+
+# 进入/mnt里安装的系统
+arch-chroot /mnt
 ```
 
 ### 时区与语言设置
@@ -95,6 +105,18 @@ locale-gen
 ```
 
 ### 网络配置
+
+编辑以下文件
+
+```bash
+# /etc/hostname
+myhostname
+
+# /etc/hosts
+127.0.0.1	localhost
+::1		localhost
+127.0.1.1	myhostname.localdomain	myhostname
+```
 
 ### 安装其他包
 
@@ -115,6 +137,12 @@ grub-install --target=x86_64-efi --efi-directory=/mnt/boot/efi --bootloader-id=G
 
 # 生成grub配置文件
 grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+### 设置root密码
+
+```bash
+passwd
 ```
 
 ## 配置
