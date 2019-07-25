@@ -104,9 +104,18 @@ pacman -S base-devel linux-headers linux-lts
 
 ### 安装grub启动器
 
-MBR
-
 UEFI
+
+```bash
+# 安装grub
+pacman -S grub efibootmgr
+
+# 指定efi安装路径
+grub-install --target=x86_64-efi --efi-directory=/mnt/boot/efi --bootloader-id=GRUB
+
+# 生成grub配置文件
+grub-mkconfig -o /boot/grub/grub.cfg
+```
 
 ## 配置
 
@@ -142,3 +151,4 @@ useradd
 
 1. [arch安装向导](https://wiki.archlinux.org/index.php/Installation_guide)
 2. [mirrors生成器](https://www.archlinux.org/mirrorlist/)
+3. [GRUB](https://wiki.archlinux.org/index.php/GRUB)
