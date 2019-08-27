@@ -38,3 +38,24 @@ setting.json
   "vetur.format.defaultFormatter.html": "prettier",
 }
 ```
+
+## Remote-SSH
+
+非常适用服务器远程开发，一般推荐使用ssh密钥登录，因为使用密码登录每次都需要输入两次，非常不方便。
+
+vscode提供ssh_config登录配置文件，大致如下配置，注意指定的私钥文件路径即可。
+
+```
+Host alias
+    HostName 192.168.x.xx
+    User xxx
+    IdentityFile xxx\.ssh\id_rsa
+```
+
+::: warning 注意事项
+
+该插件必须要勾选图中的设置，否则无法输入密码登录ssh
+
+:::
+
+![vscode-remote-ssh-settings](../img/vscode-remote-ssh-settings.jpg)
