@@ -264,6 +264,14 @@ gdisk /dev/sda
 # o新建GPT分区表,n新建分区,w写入分区
 ```
 
+### 挂载ntfs分区
+
+```bash
+sudo pacman -S ntfs-3g
+
+sudo mount -t ntfs-3g /dev/sda1 /mnt/windows
+```
+
 ## Powerline配置
 
 ### Install
