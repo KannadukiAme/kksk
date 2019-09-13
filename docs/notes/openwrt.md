@@ -2,9 +2,17 @@
 
 > 记录OpenWrt的安装与实践经验
 
-## 编译固件
+## 前言
 
-### 安装构建环境
+OpenWrt是开源的基于Linux的路由器系统
+
+## 编译
+
+openwrt除官方版本，还有其他社区或个人的定制版。如koolshare的lede,Lean的lede等等...
+
+这里推荐使用[Lean的lede](https://github.com/coolsnowwolf/lede)
+
+### 准备编译环境
 
 - Arch Linux
 
@@ -20,7 +28,9 @@ sudo apt-get install subversion build-essential libncurses5-dev zlib1g-dev gawk 
 
 其他Linux系统参考[这里](https://openwrt.org/docs/guide-developer/build-system/install-buildsystem)
 
-### 开始编译
+### 编译固件
+
+这里以官方版为例，其他定制版的操作流程基本相同。
 
 ```bash
 # clone源代码
@@ -39,8 +49,10 @@ git checkout openwrt-18.06
 make menuconfig
 
 # 开始编译(第一次编译推荐单线程)
-make -j 1 V=s
+make -j1 V=s
 ```
+
+编译好的固件放在bin目录下。
 
 ## 安装
 
@@ -50,8 +62,8 @@ make -j 1 V=s
 
 使用自己编译好的固件或者是在[snapshots/targets/x86/64/](https://downloads.openwrt.org/snapshots/targets/x86/64/)处下载镜像
 
-* combined-ext4.img.gz(linux)
-* combined-squashfs.img.gz(win)
+* combined-ext4.img.gz
+* combined-squashfs.img.gz
 
 ```bash
 # img镜像转换为vdi
