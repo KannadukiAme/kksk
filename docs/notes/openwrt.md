@@ -4,13 +4,11 @@
 
 ## 前言
 
-OpenWrt是开源的基于Linux的路由器系统
-
-## 编译
-
-openwrt除官方版本，还有其他社区或个人的定制版。如koolshare的lede,Lean的lede等等...
+OpenWrt是开源的基于Linux的路由器系统，除官方版本，还有其他社区或个人的定制版。如koolshare的lede,Lean的lede等等...
 
 这里推荐使用[Lean的lede](https://github.com/coolsnowwolf/lede)
+
+## 编译
 
 ### 准备编译环境
 
@@ -56,14 +54,18 @@ make -j1 V=s
 
 ## 安装
 
-### 在VirtualBox虚拟机中安装OpenWrt
-
-#### 准备工作
-
 使用自己编译好的固件或者是在[snapshots/targets/x86/64/](https://downloads.openwrt.org/snapshots/targets/x86/64/)处下载镜像
 
-* combined-ext4.img.gz
-* combined-squashfs.img.gz
+解压缩后，拿到squashfs文件格式的img镜像，写入到U盘作为启动盘即可。
+
+```bash
+# img镜像512字节对齐
+dd if=openwrt-x86-64-combined-squashfs.img of=/dev/sdx bs=512 conv=sync
+```
+
+如果是在VirtualBox,VMWare虚拟机中安装，则需要img镜像转换为vmdk,vdi等虚拟介质，一般编译固件会直接提供vmdk直接使用。
+
+通过VirtualBox的命令行的工具可以转换img镜像为vdi虚拟介质。
 
 ```bash
 # img镜像转换为vdi
@@ -71,31 +73,21 @@ VBoxManage convertfromraw --format VDI lede-x86-64-combined-squashfs.img lede-x8
 ```
 
 ::: warning 注意事项
-VirtualBox需要img镜像512字节对齐
+VirtualBox需要img镜像512字节对齐,需要先将img镜像进行字节对其后，再进行转换
 :::
-
-```bash
-# img镜像512字节对齐
-dd if=openwrt-x86-64-combined-squashfs.img of=new.img bs=512 conv=sync
-```
-
-#### 新建虚拟机
-
-**具体细节待完善**
-
-#### 网络设置
-
-1.第一个网卡设置仅主机模式
-
-2.第二个网卡设置网络地址转换(NAT)
-
-**具体细节待完善**
 
 ## 配置
 
-### 网卡设置
+### 修改lan口IP
 
-**具体细节待完善**
+openwrt的lan口默认地址为192.168.1.1，需要根据实际情况修改该默认IP
+
+```bash
+# 编辑lan口地址
+vi /etc/config/network
+```
+
+也可以通过web界面直接修改lan口IP
 
 ### 配置代理
 
@@ -115,6 +107,41 @@ opkg update
 
 ```bash
 opkg install luci
+```
+
+## 使用
+
+### openwrt作为主路由
+
+#### 配置wan口
+
+待续...
+
+#### 配置lan口
+
+待续...
+
+#### 配置DHCP
+
+待续...
+
+### openwrt作为旁路由
+
+关键操作有以下两点：
+
+1. 主路由的DHCP的网关IP配置为旁路由的IP
+2. 旁路由的网关IP配置为主路由的IP，关闭旁路由的DHCP
+
+## 后记
+
+### 开启SS/SSR/V2RAY插件
+
+在lean的lede中，可以通过这样的方法开启这个插件。
+
+进入ssh输入以下命令，刷新web界面即可显示该插件。
+
+```bash
+echo 0xDEADBEEF > /etc/config/google_fu_mode
 ```
 
 ## 参考链接
