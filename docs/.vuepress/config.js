@@ -29,6 +29,7 @@ module.exports = {
           '/notes/manjaro-i3',
           '/notes/openwrt',
           '/notes/arch',
+          '/notes/pve',
         ]
       },
       {
