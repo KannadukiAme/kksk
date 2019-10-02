@@ -272,6 +272,15 @@ sudo pacman -S ntfs-3g
 sudo mount -t ntfs-3g /dev/sda1 /mnt/windows
 ```
 
+### fstab自动挂载ntfs分区
+```bash
+# 查看ntfs分区所在的uuid
+blkid
+
+# /etc/fstab 添加如下配置
+UUID=XXXXXXXXXXXXXX    /mnt/disk   ntfs-3g defaults  0 0
+```
+
 ## Powerline配置
 
 ### Install
