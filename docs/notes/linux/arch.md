@@ -1,4 +1,4 @@
-# arch
+# Arch
 
 >　记录archlinux的安装与配置
 

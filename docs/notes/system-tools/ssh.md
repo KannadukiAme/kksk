@@ -1,8 +1,8 @@
-# ssh
+# OpenSSH
 
 > ssh是一种安全链接远程服务器的通讯协议
 
-## ssh客户端
+## 客户端
 
 Win平台：
 
@@ -14,7 +14,7 @@ Linux/Unix:
 
 终端自带ssh命令
 
-## ssh配置
+## 配置
 
 Linux(Arch):
 
@@ -25,7 +25,7 @@ Linux(Arch):
 PermitRootLogin yes
 ```
 
-## ssh登陆
+## 登陆
 
 ssh登陆的两种方式
 
@@ -62,21 +62,21 @@ windows下产生ssh密钥对：
 
 以xshell6为例：
 
-![ssh-1](../img/ssh-1.jpg)
+![ssh-1](~@source/img/ssh-1.jpg)
 
-![ssh-2](../img/ssh-2.jpg)
+![ssh-2](~@source/img/ssh-2.jpg)
 
-![ssh-3](../img/ssh-3.jpg)
+![ssh-3](~@source/img/ssh-3.jpg)
 
-![ssh-4](../img/ssh-4.jpg)
+![ssh-4](~@source/img/ssh-4.jpg)
 
-![ssh-5](../img/ssh-5.jpg)
+![ssh-5](~@source/img/ssh-5.jpg)
 
-![ssh-6](../img/ssh-6.jpg)
+![ssh-6](~@source/img/ssh-6.jpg)
 
-![ssh-7](../img/ssh-7.jpg)
+![ssh-7](~@source/img/ssh-7.jpg)
 
-![ssh-8](../img/ssh-8.jpg)
+![ssh-8](~@source/img/ssh-8.jpg)
 
 至此得到两个文件:
 
@@ -120,7 +120,7 @@ authorized_keys的权限 600
 
 :::
 
-## ssh清理缓存
+## 清理缓存
 
 ```bash
 # ~/.ssh/known_hosts

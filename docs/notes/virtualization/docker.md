@@ -1,4 +1,4 @@
-# docker
+# Docker
 
 > 记录docker容器的基本操作和镜像配置
 
@@ -45,7 +45,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
-## docker常用命令
+## 常用命令
 
 ```bash
 docker pull [image-name] # 拉取指定的docker镜像
@@ -135,7 +135,7 @@ docker run --detach \
 	gitlab/gitlab-ce:latest
 ```
 
-## docker容器互联
+## 容器互联
 
 ```bash
 # 创建自定义docker网络my-net
@@ -162,7 +162,7 @@ networks:
   my-net:
 ```
 
-## docker多阶段构建
+## 多阶段构建
 
 以vue项目在node容器构建，并部署到nginx服务为例
 

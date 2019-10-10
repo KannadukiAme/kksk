@@ -1,4 +1,4 @@
-# manjaro-i3
+# Manjaro-i3
 
 > 记录manjaro-i3安装、配置和使用
 

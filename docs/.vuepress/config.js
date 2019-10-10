@@ -3,44 +3,62 @@ module.exports = {
   description: 'some notes for web dev...',
   head: [
     ['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css', integrity: 'sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf', crossorigin: 'anonymous' }],
-    ['link', { rel: 'icon', href:'/madoka-avatar.png'}]
+    ['link', { rel: 'icon', href: '/madoka-avatar.png' }]
   ],
   base: '/',
   dest: './dist',
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '技术笔记', link: '/notes/git' },
-      { text: '个人偏好', link: '/perferences/vscode' },
+      { text: '技术笔记', link: '/notes/linux/arch' },
       { text: 'Git', link: 'https://github.com/KannadukiAme/kksk.git' }
     ],
     sidebar: [
       {
-        title: '技术笔记',   // 必要的
+        title: 'Linux',   // 必要的
         collapsable: false, // 可选的, 默认值是 true,
         sidebarDepth: 2,    // 可选的, 默认值是 1
         children: [
-          '/notes/git',
-          '/notes/vim',
-          '/notes/docker',
-          '/notes/ssh',
-          '/notes/sora',
-          '/notes/webpack',
-          '/notes/manjaro-i3',
-          '/notes/openwrt',
-          '/notes/arch',
-          '/notes/pve',
+          '/notes/linux/arch',
+          '/notes/linux/manjaro-i3',
+          '/notes/linux/openwrt',
         ]
       },
       {
-        title: '个人偏好',
-        collapsable: false,
-        sidebarDepth: 1,
+        title: '虚拟化技术',   // 必要的
+        collapsable: false, // 可选的, 默认值是 true,
+        sidebarDepth: 2,    // 可选的, 默认值是 1
         children: [
-          '/perferences/vscode',
-          '/perferences/code-style'
+          '/notes/virtualization/docker',
+          '/notes/virtualization/pve',
         ]
-      }
+      },
+      {
+        title: '系统工具',   // 必要的
+        collapsable: false, // 可选的, 默认值是 true,
+        sidebarDepth: 2,    // 可选的, 默认值是 1
+        children: [
+          '/notes/system-tools/ssh',
+        ]
+      },
+      {
+        title: '编辑器',   // 必要的
+        collapsable: false, // 可选的, 默认值是 true,
+        sidebarDepth: 2,    // 可选的, 默认值是 1
+        children: [
+          '/notes/editor/vim',
+          '/notes/editor/vscode',
+        ]
+      },
+      {
+        title: 'Web开发',   // 必要的
+        collapsable: false, // 可选的, 默认值是 true,
+        sidebarDepth: 2,    // 可选的, 默认值是 1
+        children: [
+          '/notes/web-development/git',
+          '/notes/web-development/webpack',
+        ]
+      },
     ],
     lastUpdated: '最近更新'
   },

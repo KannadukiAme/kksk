@@ -1,4 +1,4 @@
-# vscode
+# VSCode
 
 > 记录vscode编辑器的个人喜好以及习惯设定
 
@@ -58,4 +58,4 @@ Host alias
 
 :::
 
-![vscode-remote-ssh-settings](../img/vscode-remote-ssh-settings.jpg)
+![vscode-remote-ssh-settings](~@source/img/vscode-remote-ssh-settings.jpg)

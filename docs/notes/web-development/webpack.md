@@ -1,4 +1,4 @@
-# webpack
+# Webpack
 
 > 记录webpack常用配置和一些实践
 

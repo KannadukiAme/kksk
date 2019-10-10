@@ -67,7 +67,7 @@ python3 install.py --tern-completer
 ## 操作
 
 cheat sheet
-![vi-vim-cheat-sheet](../img/vi-vim-cheat-sheet.gif)
+![vi-vim-cheat-sheet](~@source/img/vi-vim-cheat-sheet.gif)
 
 ## 浏览器使用vim-like操作
 
