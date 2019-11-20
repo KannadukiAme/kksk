@@ -117,6 +117,28 @@ commitizen init cz-conventional-changelog --yarn --dev --exact
 
 以后可用git cz代替git commit
 
+## Commit Message规范
+
+格式如下
+
+```
+feat(xxx): add xxx // Title
+
+this is a new feature // Body
+
+Closes #1 // Footer
+```
+
+- feat: 添加新功能
+- fix: 修复bug
+- docs: 编写文档
+- refactor: 重构
+- style: 代码格式化
+- chore: 构建脚本
+- test: 测试相关
+
+#1 为对应issue
+
 ## 部署gh-pages
 
 build docs
@@ -174,3 +196,4 @@ git仓库项目开发规范：
 
 1. [GIT团队合作探讨之四--不同工作流优缺辨析](https://www.cnblogs.com/kidsitcn/p/5329163.html)
 2. [Git Community Book 中文版-rebase](http://gitbook.liuhui998.com/4_2.html)
+3. [Git Commit Msg](http://karma-runner.github.io/4.0/dev/git-commit-msg.html)
