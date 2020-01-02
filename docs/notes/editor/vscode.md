@@ -18,6 +18,12 @@
 - VSC Mikutap (music)
 - Debugger for Chrome (调试工具)
 
+字体
+
+```
+'Cascadia Code',Microsoft Yahei UI Light, Consolas, 'Courier New', monospace
+```
+
 ## 配置文件
 
 setting.json
