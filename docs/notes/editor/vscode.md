@@ -24,6 +24,19 @@
 'Cascadia Code',Microsoft Yahei UI Light, Consolas, 'Courier New', monospace
 ```
 
+::: tip 提示
+Cascadia Code字体需要在[此处](https://github.com/microsoft/cascadia-code)的git仓库下载
+:::
+
+Cascadia Code字体配置
+
+```json
+{
+    "editor.fontFamily": "'Cascadia Code', Microsoft Yahei UI Light, Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true
+}
+```
+
 ## 配置文件
 
 setting.json
