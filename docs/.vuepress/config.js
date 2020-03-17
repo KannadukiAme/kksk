@@ -22,6 +22,7 @@ module.exports = {
           '/notes/linux/arch',
           '/notes/linux/manjaro-i3',
           '/notes/linux/openwrt',
+          '/notes/linux/ubuntu'
         ]
       },
       {
