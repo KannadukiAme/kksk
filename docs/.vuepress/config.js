@@ -68,5 +68,6 @@ module.exports = {
       md.use(require('markdown-it-task-lists'))
     }
   },
-  plugins: ['@vuepress/nprogress', '@vuepress/back-to-top']
+  plugins: ['@vuepress/nprogress', '@vuepress/back-to-top'],
+  evergreen: true
 }
