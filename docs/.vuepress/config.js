@@ -8,10 +8,11 @@ module.exports = {
   base: '/',
   dest: './dist',
   themeConfig: {
+    repo: 'https://github.com/KannadukiAme/kksk.git',
+    repoLabel: 'GitHub',
     nav: [
       { text: '首页', link: '/' },
-      { text: '技术笔记', link: '/notes/linux/arch' },
-      { text: 'Git', link: 'https://github.com/KannadukiAme/kksk.git' }
+      { text: '技术笔记', link: '/notes/linux/arch' }
     ],
     sidebar: [
       {
