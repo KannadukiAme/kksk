@@ -61,6 +61,14 @@ module.exports = {
           '/notes/web-development/webpack',
         ]
       },
+      {
+        title: 'Web服务',   // 必要的
+        collapsable: false, // 可选的, 默认值是 true,
+        sidebarDepth: 2,    // 可选的, 默认值是 1
+        children: [
+          '/notes/web-server/nextcloud',
+        ]
+      },
     ],
     lastUpdated: '最近更新'
   },
