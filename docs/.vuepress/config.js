@@ -21,6 +21,7 @@ module.exports = {
         sidebarDepth: 2,    // 可选的, 默认值是 1
         children: [
           '/notes/linux/arch',
+          '/notes/linux/manjaro-architect',
           '/notes/linux/manjaro-i3',
           '/notes/linux/openwrt',
           '/notes/linux/ubuntu'
