@@ -85,6 +85,18 @@ git push origin v0.1
 
 # 推送所有tag
 git push origin --tags
+
+# 查看当前用户和邮箱
+git config --get user.name
+git config --get user.email
+
+# 设置提交用户和邮箱(全局)
+git config --global user.name xxx
+git config --global user.email xxx
+
+# 设置提交用户和邮箱(当前项目)
+git config --local user.name xxx
+git config --local user.email xxx
 ```
 
 ## 分支管理
