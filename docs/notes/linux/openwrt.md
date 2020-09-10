@@ -117,6 +117,28 @@ vi /etc/config/network
 
 ### openwrt作为单臂主路由
 
+## 相关插件
+
+### 主题美化
+
+推荐使用Argon主题，[仓库地址](https://github.com/jerrykuku/luci-theme-argon)
+
+该主题1.7.0版本支持自定义图片、视频，并且还有主题配置面板。
+
+该主题的ipk可从仓库地址里的release版下载，一共有两个ipk，另外一个是主题配置面板。
+
+由于该主题使用了backdrop-filter属性，此属性在firefox下默认是关闭的。下面图中可以看到各浏览器对此属性的支持情况。
+
+![backdrop-filter属性支持](~@source/img/backdrop-filter.jpg)
+
+因此firefox需要在about:config将layout.css.backdrop-filter.enabled的值置为true
+
+![firefox开启backdrop-filter支持](~@source/img/firefox-aboutconfig.jpg)
+
+在主题配置面板选好背景上传之后，如图所示。
+
+![openwrt登录背景](~@source/img/openwrt-bg.jpg)
+
 ## 参考链接
 
 1. [在Virtualbox虚拟机中运行OpenWrt](https://openwrt.org/zh/docs/guide-user/virtualization/virtualbox-vm)
