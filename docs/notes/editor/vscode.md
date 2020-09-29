@@ -43,18 +43,36 @@ setting.json
 
 ```json
 {
-  "workbench.colorTheme": "Ayu Mirage",
-  "files.associations": {
-      ".gitignore": "ignore"
-  },
+  "editor.fontFamily": "'Cascadia Code', Microsoft Yahei UI Light, Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
   "editor.tabSize": 2,
-  "workbench.iconTheme": "ayu",
-  "stylusSupremacy.insertColons": false,
-  "stylusSupremacy.insertSemicolons": false,
-  "stylusSupremacy.insertBraces": false,
-  "stylusSupremacy.insertNewLineAroundImports": false,
-  "stylusSupremacy.insertNewLineAroundBlocks": false,
-  "vetur.format.defaultFormatter.html": "prettier",
+  "files.autoSave": "off",
+  "workbench.colorTheme": "GitHub Dark",
+  "editor.renderControlCharacters": true,
+  "javascript.format.semicolons": "remove",
+  "typescript.format.semicolons": "remove",
+  "explorer.confirmDelete": false,
+  "vetur.validation.template": false,
+  "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "vue"
+  ],
+  "eslint.format.enable": true,
+  "eslint.run": "onSave",
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+  },
+  "debug.javascript.autoAttachFilter": "disabled",
+  "[vue]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascript]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  }
 }
 ```
 
