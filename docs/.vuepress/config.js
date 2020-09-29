@@ -58,6 +58,7 @@ module.exports = {
         collapsable: false, // 可选的, 默认值是 true,
         sidebarDepth: 2,    // 可选的, 默认值是 1
         children: [
+          '/notes/web-development/code-style',
           '/notes/web-development/git',
           '/notes/web-development/webpack',
         ]
