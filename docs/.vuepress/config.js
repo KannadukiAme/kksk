@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'kksk',
-  description: 'some notes for web dev...',
+  title: '雨ノ圓',
+  description: 'The notebook of KannadukiAme',
   head: [
     ['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.8.1/css/all.css', integrity: 'sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf', crossorigin: 'anonymous' }],
     ['link', { rel: 'icon', href: '/madoka-avatar.png' }]
@@ -12,7 +12,7 @@ module.exports = {
     repoLabel: 'GitHub',
     nav: [
       { text: '首页', link: '/' },
-      { text: '技术笔记', link: '/notes/linux/arch' }
+      { text: '笔记', link: '/notes/linux/arch' }
     ],
     sidebar: [
       {

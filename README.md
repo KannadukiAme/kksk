@@ -1,23 +1,8 @@
-# kksk
-
-> 一个魔法少女的魔法（Web Development）笔记
+# 雨ノ圓
 
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/KannadukiAme/kksk/master.svg?style=flat-square) ![Netlify](https://img.shields.io/netlify/f2fc6d00-74d7-49bf-a78b-63db98af620e?style=flat-square) ![GitHub](https://img.shields.io/github/license/KannadukiAme/kksk.svg?style=flat-square) ![GitHub repo size](https://img.shields.io/github/repo-size/KannadukiAme/kksk.svg?style=flat-square) ![Twitter Follow](https://img.shields.io/twitter/follow/Kannaduki_Ame.svg?style=flat-square)
 
-## 食用方法
-
-安装依赖
-
-```bash
-yarn
-```
-
-运行
-
-```bash
-yarn docs:dev # 开发模式
-yarn docs:build # 生产模式
-```
+主要记录一些在赛博空间的实践和心得。
 
 ## 引用
 
